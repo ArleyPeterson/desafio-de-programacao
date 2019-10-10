@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Arley Peterson Santos">
+    <meta name="description" content="Desafio de Desenvolvimento">
+    <meta name="keywords" content="desafio, Desenvolvimento, front-end, bootstrap">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Desafio de Programação</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+<body>
+    <form id="formDesafio" method="POST" action="">
+        <div class="container">
+            <div class="text-center">
+                <h2>Desafio de Programação</h2>
+                <p class="lead">Este formulário faz parte do Desafio de Programação e tem o intuito de te conhecer um pouco melhor.</p>
+            </div>
+            <div class="card">
+                <div class="card-header"> 
+                    <h5 class="text-center"><strong>Formulário de Contato</strong></h5>
+                </div>
+                <div class="card-body">
+
+                    <!-- Dados do usuário -->
+                    <div class="row">
+                        <div class="col-12 col-md-6">
+                            <label for="nome"> Nome: </label>
+                            <input type="text" class="form-control" id="nome" name="nome" placeholder="Maria">
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <label for="nome"> Sobrenome</label>
+                            <input type="text" class="form-control" id="sobrenome" name="sobrenome" placeholder="Santos">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12 col-md-6">
+                            <label for="nome"> Telefone: </label>
+                            <input pattern=".{11}" class="form-control" id="telefone" name="telefone" placeholder="99 – 99999999" maxlength="11">
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <label for="nome"> E-mail</label>
+                            <input type="text" class="form-control" id="email" name="email" placeholder="maria@santos.com.br">
+                        </div>
+                    </div>
+
+                    <!-- Fim dos dados do usuário -->
+
+                    <div class="row"> 
+                        <div class="col-12 col-md-6">
+                            <label for="origem">Como nos conheceu?</label>
+                            <select class="form-control" id="origem">
+                                <option>TV</option>
+                                <option>Internet</option>
+                                <option>Outros</option>
+                            </select>
+                        </div>
+                        <div class="form-check">
+                            Possui rede social?
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                <input type="radio" class="form-check-input"  name="redes" value="sim">Sim
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                <input type="radio" class="form-check-input"  name="redes" value="nao">Não
+                                </label>   
+                                <!---
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="redes" id="nao" value="Nao">
+                                <label class="form-check-label" for="redes">Não</label>
+                            -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <section class="redesSociais" id="redesSociais" hidden>
+                            <div class="col-12">Quais?</div> 
+                            <div class="col-12 col-md-3">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="facebook" name="tpredes" id="facebook">
+                                    <label class="form-check-label" for="facebook">Facebook</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="linkedIn" name="tpredes" id="linkedIn">
+                                    <label class="form-check-label" for="linkedIn">LinkedIn</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="instagram" name="tpredes" id="instagram">
+                                    <label class="form-check-label" for="instagram">Instagram</label>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+                <!-- Fim do Card Body -->
+            </div>
+            <!-- Fim do card Principal -->
+            <div class="card-footer">
+                <div class="row">
+                    <div class="col text-center">
+                        <button class="btn btn-primary" type="submit" name = "enviar" id = "enviar">Enviar</button>
+                    </div>
+                </div> 
+            </div>
+            <!-- Fim do rodapé -->
+        </div>
+        <!-- Fim do Container -->
+    </form>
+    <!-- Form -->
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.js"></script>
+    <script src="novo.js" type="text/javascript"></script>
+</body>
+</html>
